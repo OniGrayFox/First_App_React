@@ -1,16 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { useForm } from "react-hook-form";
-import Regform from '../src/layouts/Header/Header';
-import "./styles.css";
-import Regform from "RegForm"
 
+import "./styles.css";
 
 export default function App() {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
 
   return (
+    <RegForm>
     <form onSubmit={handleSubmit(onSubmit)}>
       <input {...register("firstName")} />
       <input {...register("lastName")} />
@@ -22,10 +21,12 @@ export default function App() {
         <option value="male">male</option>
         <option value="other">chupanya-mynuanya</option>
       </select>
-
+      
       <input type="submit" />
     </form>
+    </RegForm>
   );
+  
 }
 
 const rootElement = document.getElementById("root");
