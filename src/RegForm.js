@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 
 import "./styles.css";
 
-export default function App() {
+export default function RegForm() {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
 
