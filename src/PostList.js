@@ -7,7 +7,7 @@ import PostItem from "./PostItems";
 const PostList = ({posts, title}) => {
     
   return (
-    <div className="post">
+    <div >
     <h1 style = {{textAlign: 'center'}}>
         {title}
       </h1>
