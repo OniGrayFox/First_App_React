@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 import "./styles.css";
 import Regform from "./RegForm"
 import CustomInput from "./CustomInput";
-import Post from "./Post";
+import PostItem from "./PostItems";
+import PostList from "./PostList";
 
 function App() {
+
   return (
-    <Regform/>,
-    <CustomInput/>,
-    <Post/>
+   
+    <div>
+      <PostList/>
     
+    </div>
 
   );
 }

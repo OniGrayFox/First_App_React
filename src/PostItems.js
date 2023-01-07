@@ -3,11 +3,12 @@ import ReactDOM from "react-dom";
 
 
 
-function Post() {
+const PostItem = (props) => {
+  console.log(props)
   return (
     <div className="post">
          <div className="post__content">
-            <strong>Заголовок</strong>
+            <strong>{}Заголовок</strong>
             <div>Длинное большое подробное описание чего либо</div>
         </div>
         <div className="post__btn">
@@ -20,6 +21,6 @@ function Post() {
 
   );
 }
-export default Post;
+export default PostItem;
 const rootElement = document.getElementById("root");
-ReactDOM.render(<Post/>, rootElement);
+ReactDOM.render(<PostItem/>, rootElement);
