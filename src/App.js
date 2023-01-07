@@ -1,16 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { useForm } from "react-hook-form";
-import Regform from '../src/layouts/Header/Header';
+
 import "./styles.css";
-import Regform from "RegForm"
+import Regform from "./RegForm"
 
 
-export default function App() {
+function App() {
   return (
     <Regform/>
   );
 }
-
+export default App;
 const rootElement = document.getElementById("root");
-ReactDOM.render(<Regform/>, rootElement);
+ReactDOM.render(<App/>, rootElement);

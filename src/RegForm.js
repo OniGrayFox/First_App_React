@@ -9,7 +9,7 @@ export default function RegForm() {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <RegForm>
+ 
     <form onSubmit={handleSubmit(onSubmit)}>
       <input {...register("firstName")} />
       <input {...register("lastName")} />
@@ -24,10 +24,10 @@ export default function RegForm() {
       
       <input type="submit" />
     </form>
-    </RegForm>
+    
   );
   
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<RegForm />, rootElement);
