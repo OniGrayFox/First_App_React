@@ -8,11 +8,13 @@ import PostItem from "./PostItems";
 import PostList from "./PostList";
 
 function App() {
-
+ const [posts , setPosts] = useState([
+  {id: 1 , title: "JS", body: "Description"}
+ ])
   return (
    
     <div>
-      <PostList/>
+      <PostList posts={posts} title = "Cписок постов"/>
     
     </div>
 

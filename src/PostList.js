@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import PostItem from "./PostItems";
 
 
 
-const PostItem = (props) => {
-    const [posts , setPosts] = useState([
-        {id:1 , title: "Js" , body: "Jaba Script"},
-        {id:1 , title: "Js" , body: "Jaba Script"},
-        {id:1 , title: "Js" , body: "Jaba Script"},
-      ])
+const PostList = ({posts, title}) => {
+    
   return (
     <div className="post">
     <h1 style = {{textAlign: 'center'}}>
-        Список постов
+        {title}
       </h1>
       {posts.map((post ) => <PostItem post = {post} key = {post.id}/>)}
 
@@ -22,6 +19,5 @@ const PostItem = (props) => {
 
   );
 }
-export default PostItem;
-const rootElement = document.getElementById("root");
-ReactDOM.render(<PostItem/>, rootElement);
+export default PostList;
+

@@ -1,15 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
-
-
 
 const PostItem = (props) => {
+
   console.log(props)
   return (
     <div className="post">
          <div className="post__content">
-            <strong>{}Заголовок</strong>
-            <div>Длинное большое подробное описание чего либо</div>
+            <strong>{props.post.id}</strong>
+            <div>{props.post.body}</div>
         </div>
         <div className="post__btn">
             <button>Delete</button>
@@ -20,7 +18,6 @@ const PostItem = (props) => {
     
 
   );
-}
+};
 export default PostItem;
-const rootElement = document.getElementById("root");
-ReactDOM.render(<PostItem/>, rootElement);
+
