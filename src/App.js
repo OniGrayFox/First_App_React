@@ -3,11 +3,16 @@ import ReactDOM from "react-dom";
 
 import "./styles.css";
 import Regform from "./RegForm"
-
+import CustomInput from "./CustomInput";
+import Post from "./Post";
 
 function App() {
   return (
-    <Regform/>
+    <Regform/>,
+    <CustomInput/>,
+    <Post/>
+    
+
   );
 }
 export default App;
