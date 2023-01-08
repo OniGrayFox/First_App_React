@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import classess from "./MyButtonStyle.css"
+import classes from "./MyButton.module.css"
 
 
 
-const MyButton = (props) => {
+const MyButton = ({children, ...props}) => {
     
   return (
-    <button className={classess.newBtn}>
-
+    <button {...props} className={classes.newBtn}>
+        {children}
 
     </button>
    
     
 
   );
-}
+};
 export default MyButton;
 
