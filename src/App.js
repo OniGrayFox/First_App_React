@@ -6,28 +6,35 @@ import Regform from "./RegForm"
 import CustomInput from "./CustomInput";
 import PostItem from "./PostItems";
 import PostList from "./PostList";
-import PostInput from "./PostInput";
+import PostForm from "./PostForm";
 
 
 
 
 
 function App() {
- const [posts , setPosts] = useState([
-  {id: 1 , title: "JS", body: "Description"},
-  {id: 1 , title: "JS", body: "Description"},
-  {id: 1 , title: "JS", body: "Description"},
- ])
+
+  const [posts , setPosts] = useState([])
+
+  const createPost = (newPost) =>{
+    setPosts(...posts, newPost )
+  }
+
+
+
+
+
+ 
   return (
    
     <div>
-      <PostInput/>
-      <PostList posts={posts} title = "Cписок постов"/>
+      <PostForm create= {createPost}/>
+      <PostList posts={posts} title = "Можно динамически создавать списки без обновлений!"/>
 
     </div>
 
   );
-}
+};
 export default App;
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App/>, rootElement);
