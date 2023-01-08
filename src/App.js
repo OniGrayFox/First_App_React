@@ -1,16 +1,35 @@
-import React from "react";
+
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { useForm } from "react-hook-form";
-import Regform from '../src/layouts/Header/Header';
+
 import "./styles.css";
-import Regform from "RegForm"
+import Regform from "./RegForm"
+import CustomInput from "./CustomInput";
+import PostItem from "./PostItems";
+import PostList from "./PostList";
+import PostInput from "./PostInput";
 
 
-export default function App() {
+
+
+
+function App() {
+ const [posts , setPosts] = useState([
+  {id: 1 , title: "JS", body: "Description"},
+  {id: 1 , title: "JS", body: "Description"},
+  {id: 1 , title: "JS", body: "Description"},
+ ])
   return (
-    <Regform/>
+   
+    <div>
+      <PostInput/>
+      <PostList posts={posts} title = "Cписок постов"/>
+
+    </div>
+
   );
 }
-
+export default App;
 const rootElement = document.getElementById("root");
-ReactDOM.render(<Regform/>, rootElement);
+ReactDOM.render(<App/>, rootElement);
+
