@@ -17,19 +17,30 @@ function App() {
   const [posts , setPosts] = useState([])
 
   const createPost = (newPost) =>{
-    setPosts(...posts, newPost )
+    setPosts([...posts, newPost] )
   }
 
 
-
+  const removePost = (post) => {
+    setPosts(posts.filter(p => p.id !== post.id))
+  }
 
 
  
   return (
    
     <div>
+      <br/>
+      <Regform/>
+      <br/>
+      <CustomInput/>
+      <br/>
       <PostForm create= {createPost}/>
-      <PostList posts={posts} title = "Можно динамически создавать списки без обновлений!"/>
+      {posts.length !== 0
+        ?<PostList remove = {removePost} posts={posts} title = "Можно динамически создавать списки без обновлений!"/>
+        :<div style = {{color:'white'}}>Тут ничего нет, пока что</div>
+      }
+      
 
     </div>
 

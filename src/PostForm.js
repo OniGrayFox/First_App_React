@@ -4,9 +4,8 @@ import React, { useState } from "react";
 
 
 const PostForm = ({create}) => {
-  const [post, setPost] = useState([{title: '' , body: '' }])
-  const [titles, setState] = useState('')  
-  const [body, setBody] = useState('')
+  const [post, setPost] = useState([''])
+
 
   const addNewPost = (e) =>{
     e.preventDefault()

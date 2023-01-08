@@ -80,6 +80,17 @@ select{
   
 }
 
+textarea {
+  line-height: 2;
+  text-align: left;
+  display: block;
+  margin-bottom: 13px;
+  margin-top: 20px;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 200;
+}
+
 label {
   line-height: 2;
   text-align: left;
