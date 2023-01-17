@@ -14,7 +14,7 @@ const PostForm = ({create}) => {
       ...post , id: Date.now()
     }
     create(newPost)
-    setPost([{title: '' , body: '' }])
+    setPost([{title: '' , body: '' , count: ''}])
     }
    
   return (
@@ -27,7 +27,11 @@ const PostForm = ({create}) => {
     value={post.body}
     onChange = {e => setPost({...post,body:e.target.value})}
     />
-    <button type="submit" onClick = {addNewPost}>Создать пост</button>
+    <input type = "text" placeholder="Количество"
+    value={post.count}
+    onChange = {e => setPost({...post,count:e.target.value})}
+    />
+    <button type="submit" onClick = {addNewPost}>Добавить в список</button>
 </form>
    
     
