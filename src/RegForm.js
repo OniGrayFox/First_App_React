@@ -10,8 +10,6 @@ export default function RegForm() {
   // const [data, setValue] = useState('')
 
   return (
-    <div>
-     
     <form onSubmit={handleSubmit(onSubmit)}>
       <input placeholder="firstName" {...register("firstName")} />
       <input placeholder="lastName" {...register("lastName")} />
@@ -24,10 +22,10 @@ export default function RegForm() {
       
       <input type="submit" />
     </form>
-    </div>
   );
   
 }
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<RegForm />, rootElement);
+
