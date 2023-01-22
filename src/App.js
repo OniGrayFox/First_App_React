@@ -31,7 +31,7 @@ function App() {
 
     setSelectedSort(sort);
     console.log(sort)
-    // setPosts([...posts].sort((a , b) => a[sort].localCompare(b[sort])));
+    setPosts([...posts].sort((a , b) => a[sort].localeCompare(b[sort])))
   }
  
   return (
@@ -47,8 +47,8 @@ function App() {
         onChange = {sortPost}
         defaultValue="Сортировка"
         options = {[
-          {value: 'title', name: 'По названию'},
-          {value: 'body', name: 'Описанию'},
+          {value: 'title', name: 'title'},
+          {value: 'body', name: 'body'},
        
         ]}
         />
