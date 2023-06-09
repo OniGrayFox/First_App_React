@@ -7,8 +7,8 @@ const PostInput = ({posts, title}) => {
     
   return (
     <form>
-        <input type = "text" placeholder="Название поста"/>
-        <input type = "text" placeholder="Содержание поста"/>
+        <input type = "text" placeholder="Название дела"/>
+        <input type = "text" placeholder="Описание"/>
         <button type="submit">Создать пост</button>
     </form>
    
